@@ -1,34 +1,16 @@
 import React from "react";
 import Nav from "../components/nav"
-import Link from "next/link";
-import ElectricDropGrid from "../components/electric-grid";
-import {ArrowRight} from "lucide-react";
+import AnimatedProjectItem from "../components/project-nav";
 
 const Projects: React.FC = () => {
     return (
         <div
             className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden dark-theme relative">
             <Nav></Nav>
-            <nav>
-                <ul className="flex flex-col gap-2 text-zinc-500 text-md">
-                    <li className="w-64 h-36 flex flex-col justify-center text-center duration-200 hover:text-zinc-100 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 p-6">
-                        <ElectricDropGrid/>
-                        <span className="flex justify-between pt-1">
-                            <span className="text-start">Individual Projects</span>
-                            <Link href="/" className="duration-200 text-zinc-500 hover:text-zinc-100">
-                                <ArrowRight/>
-                            </Link>
-                        </span>
-                    </li>
-                    <li className="w-64 h-36 flex flex-col justify-center text-center duration-200 hover:text-zinc-100 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 p-6">
-                        <ElectricDropGrid/>
-                        <span className="flex justify-between pt-1">
-                            <span className="text-start">Group Projects</span>
-                            <Link href="/" className="duration-200 text-zinc-500 hover:text-zinc-100">
-                                <ArrowRight/>
-                            </Link>
-                        </span>
-                    </li>
+            <nav className="container flex flex-col justify-center items-center">
+                <ul className="text-zinc-500 text-md grid grid-cols-1 gap-6 mx-auto sm:mt-0 sm:grid-cols-2 lg:gap-16">
+                    <AnimatedProjectItem title="Individual Projects" link="/projects/individual-projects"/>
+                    <AnimatedProjectItem title="Group Projects" link="/projects/group-projects"/>
                 </ul>
             </nav>
         </div>
