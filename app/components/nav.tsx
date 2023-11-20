@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
                 <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
                     <div className="flex justify-between gap-4">
                         <Link
-                            href="/app/components/project-nav"
+                            href="/projects"
                             className="duration-200 text-zinc-500 hover:text-zinc-100"
                         >
                             Projects
