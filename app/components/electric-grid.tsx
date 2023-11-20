@@ -4,17 +4,42 @@ import React, {useEffect} from "react";
 import anime from 'animejs';
 
 const ElectricDropGrid = () => {
+    const [gridHeight, setGridHeight] = React.useState(5);
+    const [gridWidth, setGridWidth] = React.useState(12);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+
+            if (width > 1023) {
+                setGridHeight(12);
+                setGridWidth(18);
+            } else if (width > 767) {
+                setGridHeight(7);
+                setGridWidth(12);
+            } else {
+                setGridHeight(5);
+                setGridWidth(12);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <div className="grid h-full place-content-center px-8">
-            <DotGrid/>
+        <div className="grid h-full place-content-center">
+            <DotGrid gridHeight={gridHeight} gridWidth={gridWidth}/>
         </div>
     )
 };
 
-const GRID_WIDTH = 12;
-const GRID_HEIGHT = 5;
-
-const DotGrid: React.FC = () => {
+const DotGrid: React.FC<{ gridHeight: number, gridWidth: number }> = ({gridHeight, gridWidth}) => {
     useEffect(() => {
         const handleDotClick = (index: number) => {
             anime({
@@ -32,7 +57,7 @@ const DotGrid: React.FC = () => {
                     {value: 0.5, easing: 'easeInOutQuad', duration: 500}
                 ],
                 delay: anime.stagger(100, {
-                    grid: [GRID_WIDTH, GRID_HEIGHT],
+                    grid: [gridWidth, gridHeight],
                     from: index,
                 }),
             });
@@ -45,12 +70,12 @@ const DotGrid: React.FC = () => {
 
         return () => clearInterval(intervalId);
 
-    }, []);
+    }, [gridHeight, gridWidth]);
 
     const dots = [];
     let index = 0;
-    for (let y = 0; y < GRID_HEIGHT; y++) {
-        for (let x = 0; x < GRID_WIDTH; x++) {
+    for (let y = 0; y < gridHeight; y++) {
+        for (let x = 0; x < gridWidth; x++) {
             dots.push(
                 <div
                     className="group rounded-full p-2 transition-colors"
@@ -67,7 +92,7 @@ const DotGrid: React.FC = () => {
 
     return (
         <div
-            style={{gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)`}}
+            style={{gridTemplateColumns: `repeat(${gridWidth}, 1fr)`}}
             className="grid w-fit"
         >
             {dots}
