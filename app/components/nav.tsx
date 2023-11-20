@@ -28,9 +28,9 @@ const Navigation: React.FC = () => {
                 }`}
             >
                 <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-                    <div className="flex justify-between gap-8">
+                    <div className="flex justify-between gap-4">
                         <Link
-                            href="/projects"
+                            href="/app/components/project-nav"
                             className="duration-200 text-zinc-500 hover:text-zinc-100"
                         >
                             Projects
@@ -40,6 +40,12 @@ const Navigation: React.FC = () => {
                             className="duration-200 text-zinc-500 hover:text-zinc-100"
                         >
                             Contact
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="duration-200 text-zinc-500 hover:text-zinc-100"
+                        >
+                            Services
                         </Link>
                     </div>
 
