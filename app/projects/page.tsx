@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
             <nav className="container flex flex-col justify-center items-center">
                 <ul className="text-zinc-500 text-md grid grid-cols-1 gap-6 mx-auto sm:mt-0 sm:grid-cols-2 lg:gap-16">
                     <AnimatedProjectItem title="Individual Projects" link="/projects/individual-projects"/>
-                    <AnimatedProjectItem title="Group Projects" link="/projects/group-projects"/>
+                    <AnimatedProjectItem title="Team Projects" link="/projects/team-projects"/>
                 </ul>
             </nav>
         </div>
