@@ -1,5 +1,3 @@
-//TODO: Page with fiverr gigs
-
 import React from "react";
 import Navigation from "../components/nav";
 import {ArrowRight} from "lucide-react";
@@ -43,7 +41,7 @@ const Services: React.FC = () => {
         <div className="flex flex-col items-center justify-center min-h-screen overflow-hidden dark-theme relative">
             <Navigation/>
             <div className="my-24">
-                <h2 className="text-center text-zinc-400 text-4xl mt-16">My fiverr gigs</h2>
+                <h2 className="text-center text-zinc-400 text-4xl">My fiverr gigs</h2>
                 <div className="text-zinc-500">
                     {gigs.map((gig) => (
                         <div
