@@ -13,19 +13,19 @@ const projects: { date: string, title: string, description: string, link: string
         date: "Sep 10, 2023",
         title: "Contact Management API",
         description: "A REST API built with Node.js, Express.js and MongoDB.",
-        link: "/",
+        link: "https://github.com/jkamin61/nodejs-homework-template",
     },
     {
         date: "Oct 3, 2023",
         title: "Finance Management API",
         description: "A REST API built with Node.js, Express.js and MongoDB. Documentation written with Swagger. Fully implemented by me for team frontend project.",
-        link: "/",
+        link: "https://github.com/jkamin61/wallet-app-backend",
     },
     {
         date: "May 10, 2023",
         title: "Contact Management System",
         description: "A web application built with React.js and Redux. Stores data in local storage.",
-        link: "/",
+        link: "https://jkamin61.github.io/Contact-keeper/",
     },
     {
         date: "Apr 17, 2023",
@@ -49,11 +49,10 @@ const IndividualProjectsPage = () => {
                     {projects.map((project) => (
                         <div key={project.title}
                              className="my-5 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
-                            <Link href={project.link}>
+                            <Link href={project.link} target="_blank">
                                 <article className="text-zinc-300 p-4">
                                 <span>
                                 <p className="text-sm">{project.date}</p>
-
                                     </span>
                                     <h3 className="text-2xl my-2">{project.title}</h3>
                                     <p className="text-md text-zinc-400">{project.description}</p>

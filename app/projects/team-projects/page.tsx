@@ -20,7 +20,7 @@ const projects: { date: string, title: string, description: string, link: string
 const GroupProjectsPage = () => {
     return (
         <div
-            className="relative flex flex-col items-center pt-20 px-6 mx-auto w-full h-full overflow-hidden dark-theme">
+            className="relative flex flex-col items-center p-20 px-6 mx-auto w-full h-full overflow-hidden dark-theme">
             <Navigation/>
             <div className="my-8 sm:my-16 divide-y divide-zinc-800 divide-dashed">
                 <div className="">
@@ -28,7 +28,7 @@ const GroupProjectsPage = () => {
                     <p className="py-4 text-zinc-400">Projects built with teams selected by mentors during my fullstack
                         developer course.</p>
                 </div>
-                <div className="pb-56">
+                <div className="pb-56 lg:pb-72">
                     {projects.map((project) => (
                         <div key={project.title}
                              className="my-5 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
