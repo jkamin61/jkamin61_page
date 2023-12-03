@@ -7,13 +7,13 @@ const projects: { date: string, title: string, description: string, link: string
         date: "Oct 10, 2023",
         title: "Wallet App",
         description: "Application to manage your finances. Built with React.js, Redux, Node.js, MongoDB. Implemented during my GoIT studies with my team.",
-        link: "/https://wallet-app-teamloremipsum.netlify.app",
+        link: "https://wallet-app-teamloremipsum.netlify.app",
     },
     {
         date: "Feb 23, 2023",
         title: "Film library",
         description: "A web application built with Vanilla Javascript. Uses public API to fetch data",
-        link: "/https://jkamin61.github.io/film_library_project/"
+        link: "https://jkamin61.github.io/film_library_project/"
     },
 ];
 
