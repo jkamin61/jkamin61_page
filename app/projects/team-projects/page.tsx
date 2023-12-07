@@ -32,7 +32,7 @@ const GroupProjectsPage = () => {
                     {projects.map((project) => (
                         <div key={project.title}
                              className="my-5 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
-                            <Link href={project.link}>
+                            <Link href={project.link} target="_blank">
                                 <article className="text-zinc-300 p-4">
                                 <span>
                                 <p className="text-sm">{project.date}</p>
