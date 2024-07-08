@@ -4,6 +4,18 @@ import Link from "next/link";
 
 const projects: { date: string, title: string, description: string, link: string }[] = [
     {
+        date: "June 20, 2024",
+        title: "Ultimate tic tac toe",
+        description: "Game built in Java with graphical user interface implemented with Java Swing, AWT, JavaFX",
+        link: "https://github.com/jkamin61/tic-tac-toe_OX"
+    },
+    {
+        date: "May 10, 2024",
+        title: "Task sphere",
+        description: "Application built in Java with graphical user interface implemented with Java Swing, AWT",
+        link: "https://github.com/jkamin61/task-sphere"
+    },
+    {
         date: "Nov 20, 2023",
         title: "jkamin61.dev",
         description: "My personal website built with Next.js, Typescript and TailwindCSS.",
