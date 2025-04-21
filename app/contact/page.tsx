@@ -21,9 +21,9 @@ const socials: Socials[] = [
     },
     {
         icon: <Mail size={20}/>,
-        href: "mailto:juliuszmkaminski@gmail.com",
+        href: "mailto:juliuszkaminskim@gmail.com",
         label: "Email",
-        handle: "jkamin61@dev",
+        handle: "juliuszkaminskim@gmail.com",
     },
     {
         icon: <Github size={20}/>,

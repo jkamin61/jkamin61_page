@@ -35,12 +35,12 @@ const Navigation: React.FC = () => {
                         >
                             Projects
                         </Link>
-                        <Link
-                            href="/services"
-                            className="duration-200 text-zinc-500 hover:text-zinc-100"
-                        >
-                            Services
-                        </Link>
+                        {/*<Link*/}
+                        {/*    href="/services"*/}
+                        {/*    className="duration-200 text-zinc-500 hover:text-zinc-100"*/}
+                        {/*>*/}
+                        {/*    Services*/}
+                        {/*</Link>*/}
                         <Link
                             href="/contact"
                             className="duration-200 text-zinc-500 hover:text-zinc-100"
