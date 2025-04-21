@@ -53,8 +53,8 @@ const Dots: React.FC<{ numberOfDots: number }> = ({ numberOfDots }) => {
     return (
         <div>
             {dots.map((dot, i) => {
-                const directionX = (mousePosition.x - dot.startX) / 1200;
-                const directionY = (mousePosition.y - dot.startY) / 1200;
+                const directionX = ((mousePosition.x - dot.startX) / 1200) * 1.5;
+                const directionY = ((mousePosition.y - dot.startY) / 1200) * 1.5;
                 const left = dot.startX + directionX;
                 const top = dot.startY + directionY;
 
